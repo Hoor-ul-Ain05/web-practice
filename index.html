@@ -5,16 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hoor-ul-Ain | Portfolio</title>
 
+<!-- ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background: #0d1117;
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #0d1117, #1f2937);
     color: white;
 }
 
@@ -22,12 +24,10 @@ body {
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    background: #161b22;
-}
-
-nav h2 {
-    color: #00f7ff;
+    padding: 15px 30px;
+    background: rgba(0,0,0,0.6);
+    position: sticky;
+    top: 0;
 }
 
 nav a {
@@ -44,31 +44,35 @@ nav a:hover {
 .hero {
     text-align: center;
     padding: 80px 20px;
-}
-
-.hero h1 {
-    font-size: 40px;
+    animation: fadeIn 2s ease-in;
 }
 
 .hero span {
     color: #00f7ff;
 }
 
+/* BUTTON */
 .btn {
     background: #00f7ff;
     padding: 10px 20px;
     border: none;
-    margin-top: 20px;
+    margin-top: 15px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-/* SECTIONS */
+.btn:hover {
+    background: white;
+}
+
+/* SECTION */
 .section {
     padding: 60px 20px;
     text-align: center;
+    animation: fadeUp 1s ease;
 }
 
-/* PROJECT CARDS */
+/* PROJECTS */
 .projects {
     display: flex;
     flex-wrap: wrap;
@@ -84,15 +88,66 @@ nav a:hover {
     transition: 0.3s;
 }
 
-.card img {
-    height: 150px;
-    object-fit: cover;
+.card:hover {
+    transform: translateY(-10px);
 }
 
+.card img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* SKILLS */
+.skills span {
+    display: inline-block;
+    background: #00f7ff;
+    color: black;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.skills span:hover {
+    background: white;
+}
+
+/* CONTACT ICONS */
+.contact-icons i {
+    font-size: 24px;
+    margin: 10px;
+    color: #00f7ff;
+    transition: 0.3s;
+}
+
+.contact-icons i:hover {
+    color: white;
+}
+
+/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
     background: #161b22;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 </style>
 </head>
@@ -104,7 +159,9 @@ footer {
     <h2>Hoor.dev</h2>
     <div>
         <a href="#about">About</a>
+        <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
         <a href="#contact">Contact</a>
     </div>
 </nav>
@@ -113,23 +170,43 @@ footer {
 <div class="hero">
     <h1>Hi, I'm <span>Hoor-ul-Ain</span> 👋</h1>
     <p>Aspiring Software & Web Developer</p>
-    <button class="btn">Explore My Work</button>
+    <button class="btn" onclick="document.getElementById('projects').scrollIntoView()">Explore My Work</button>
 </div>
 
 <!-- ABOUT -->
 <div class="section" id="about">
-    <h2>About Me</h2>
-    <p>I am a Computer Science student passionate about building web applications and solving problems.</p>
+    <h2><i class="fa-solid fa-user"></i> About Me</h2>
+    <p>
+        I am a passionate Computer Science student with strong interest in Web Development 
+        and Software Engineering. I love building projects, solving problems, and learning 
+        new technologies to grow as a professional developer.
+    </p>
+</div>
+
+<!-- SKILLS -->
+<div class="section" id="skills">
+    <h2><i class="fa-solid fa-code"></i> Skills</h2>
+    <div class="skills">
+        <span>C</span>
+        <span>C++</span>
+        <span>Java</span>
+        <span>Python</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Arduino</span>
+        <span>MS Office</span>
+        <span>Canva</span>
+    </div>
 </div>
 
 <!-- PROJECTS -->
 <div class="section" id="projects">
-    <h2>My Projects</h2>
+    <h2><i class="fa-solid fa-laptop-code"></i> Projects</h2>
 
     <div class="projects">
 
         <div class="card">
-            <img src="management-system.png.png" width="100%">
+            <img src="management-system.png.png">
             <h3>Management System</h3>
             <p>Web app to manage student data</p>
             <a href="https://github.com/hoorjanjua05-commits/management-system">
@@ -138,7 +215,7 @@ footer {
         </div>
 
         <div class="card">
-            <img src="home-automation.png.png" width="100%">
+            <img src="home-automation.png.png">
             <h3>Home Automation</h3>
             <p>Arduino smart control system</p>
             <a href="https://github.com/hoorjanjua05-commits/home-automation">
@@ -147,7 +224,7 @@ footer {
         </div>
 
         <div class="card">
-            <img src="text-editor.png - Copy.png" width="100%">
+            <img src="text-editor.png - Copy.png">
             <h3>Text Editor</h3>
             <p>Stack-based editor in C++</p>
             <a href="https://github.com/hoorjanjua05-commits/text-editor">
@@ -156,7 +233,7 @@ footer {
         </div>
 
         <div class="card">
-            <img src="temperature-converter.png.png" width="100%">
+            <img src="temperature-converter.png.png">
             <h3>Temperature Converter</h3>
             <p>Basic conversion program</p>
             <a href="https://github.com/hoorjanjua05-commits/temperature-converter">
@@ -164,20 +241,28 @@ footer {
             </a>
         </div>
 
-        <div class="card">
-            <img src="virtualbox.png.png" width="100%">
-            <h3>VirtualBox Setup</h3>
-            <p>OS installation in virtual environment</p>
-        </div>
-
     </div>
+</div>
+
+<!-- CERTIFICATES -->
+<div class="section" id="certificates">
+    <h2><i class="fa-solid fa-certificate"></i> Certificates</h2>
+    <p>Digital Marketing | Shopify & Daraz | SEO Writing | Spoken English</p>
 </div>
 
 <!-- CONTACT -->
 <div class="section" id="contact">
-    <h2>Contact Me</h2>
+    <h2><i class="fa-solid fa-envelope"></i> Contact</h2>
+
     <p>Email: hoorjanjua05@gmail.com</p>
-    <p>Location: Chakwal, Pakistan</p>
+    <p>Phone: +923700147271</p>
+    <p>LinkedIn: www.linkedin.com/in/hoor-ul-ain-a9a6023b4</p>
+
+    <div class="contact-icons">
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-solid fa-envelope"></i>
+        <i class="fa-solid fa-phone"></i>
+    </div>
 </div>
 
 <!-- FOOTER -->
