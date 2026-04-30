@@ -5,13 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hoor-ul-Ain | Portfolio</title>
 
-<!-- ICONS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
     margin: 0;
@@ -28,40 +25,29 @@ nav {
     background: rgba(0,0,0,0.6);
     position: sticky;
     top: 0;
-}
-
-nav a {
-    color: white;
-    margin-left: 20px;
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: #00f7ff;
+    backdrop-filter: blur(10px);
 }
 
 /* HERO */
 .hero {
     text-align: center;
     padding: 80px 20px;
-    animation: fadeIn 2s ease-in;
 }
 
-.hero span {
-    color: #00f7ff;
-}
+.hero span { color: #00f7ff; }
 
 /* BUTTON */
 .btn {
     background: #00f7ff;
     padding: 10px 20px;
     border: none;
-    margin-top: 15px;
     cursor: pointer;
+    margin: 5px;
     transition: 0.3s;
 }
 
 .btn:hover {
+    transform: scale(1.1);
     background: white;
 }
 
@@ -69,7 +55,6 @@ nav a:hover {
 .section {
     padding: 60px 20px;
     text-align: center;
-    animation: fadeUp 1s ease;
 }
 
 /* PROJECTS */
@@ -107,47 +92,20 @@ nav a:hover {
     padding: 8px 15px;
     margin: 5px;
     border-radius: 20px;
-    transition: 0.3s;
 }
 
-.skills span:hover {
-    background: white;
-}
-
-/* CONTACT ICONS */
+/* CONTACT */
 .contact-icons i {
     font-size: 24px;
     margin: 10px;
     color: #00f7ff;
-    transition: 0.3s;
-}
-
-.contact-icons i:hover {
-    color: white;
 }
 
 /* FOOTER */
 footer {
-    text-align: center;
     padding: 20px;
     background: #161b22;
-}
-
-/* ANIMATIONS */
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    text-align: center;
 }
 </style>
 </head>
@@ -161,6 +119,7 @@ footer {
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
         <a href="#certificates">Certificates</a>
         <a href="#contact">Contact</a>
     </div>
@@ -170,16 +129,15 @@ footer {
 <div class="hero">
     <h1>Hi, I'm <span>Hoor-ul-Ain</span> 👋</h1>
     <p>Aspiring Software & Web Developer</p>
-    <button class="btn" onclick="document.getElementById('projects').scrollIntoView()">Explore My Work</button>
+    <button class="btn" onclick="scrollToSection('projects')">View Projects</button>
 </div>
 
 <!-- ABOUT -->
 <div class="section" id="about">
     <h2><i class="fa-solid fa-user"></i> About Me</h2>
     <p>
-        I am a passionate Computer Science student with strong interest in Web Development 
-        and Cyber Secuirity. I love building projects, solving problems, and learning 
-        new technologies to grow as a professional developer.
+        I am a passionate Computer Science student focused on Web Development and Software Engineering. 
+        I build real-world projects, solve problems, and continuously improve my technical skills.
     </p>
 </div>
 
@@ -208,40 +166,39 @@ footer {
         <div class="card">
             <img src="management-system.png.png">
             <h3>Management System</h3>
-            <p>Web app to manage student data</p>
-            <a href="https://github.com/hoorjanjua05-commits/management-system">
-                <button class="btn">View Code</button>
-            </a>
+            <p>Student data management web app</p>
+            <a href="https://github.com/Hoor-ul-Ain05/management-system"><button class="btn">Code</button></a>
         </div>
 
         <div class="card">
             <img src="home-automation.png.png">
             <h3>Home Automation</h3>
-            <p>Arduino smart control system</p>
-            <a href="https://github.com/hoorjanjua05-commits/home-automation">
-                <button class="btn">View Code</button>
-            </a>
+            <p>Arduino smart system</p>
+            <a href="https://github.com/Hoor-ul-Ain05/home-automation"><button class="btn">Code</button></a>
         </div>
 
         <div class="card">
             <img src="text-editor.png - Copy.png">
             <h3>Text Editor</h3>
-            <p>Stack-based editor in C++</p>
-            <a href="https://github.com/hoorjanjua05-commits/text-editor">
-                <button class="btn">View Code</button>
-            </a>
+            <p>Stack-based editor</p>
+            <a href="https://github.com/Hoor-ul-Ain05/text-editor"><button class="btn">Code</button></a>
         </div>
 
         <div class="card">
             <img src="temperature-converter.png.png">
             <h3>Temperature Converter</h3>
-            <p>Basic conversion program</p>
-            <a href="https://github.com/hoorjanjua05-commits/temperature-converter">
-                <button class="btn">View Code</button>
-            </a>
+            <p>Conversion program</p>
+            <a href="https://github.com/Hoor-ul-Ain05/temperature-converter"><button class="btn">Code</button></a>
         </div>
 
     </div>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="section" id="experience">
+    <h2><i class="fa-solid fa-briefcase"></i> Experience</h2>
+    <p>Freelancing (Beginner Level)</p>
+    <p>Academic Projects Development</p>
 </div>
 
 <!-- CERTIFICATES -->
@@ -269,6 +226,12 @@ footer {
 <footer>
     <p>© 2026 Hoor-ul-Ain | Portfolio</p>
 </footer>
+
+<script>
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView();
+}
+</script>
 
 </body>
 </html>
