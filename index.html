@@ -1,86 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Hoor-ul-Ain Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoor-ul-Ain | Portfolio</title>
 
-    <style>
-        body {
-            font-family: Arial;
-            margin: 0;
-            background-color: #0d1117;
-            color: white;
-            text-align: center;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
 
-        nav {
-            background: #161b22;
-            padding: 15px;
-        }
+body {
+    background: #0d1117;
+    color: white;
+}
 
-        nav a {
-            color: white;
-            margin: 10px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #161b22;
+}
 
-        nav a:hover {
-            color: #00f7ff;
-        }
+nav h2 {
+    color: #00f7ff;
+}
 
-        .hero {
-            padding: 60px;
-        }
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
 
-        .btn {
-            background: #00f7ff;
-            color: black;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            margin-top: 20px;
-        }
+nav a:hover {
+    color: #00f7ff;
+}
 
-        .projects {
-            padding: 40px;
-        }
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
 
-        .card {
-            background: #161b22;
-            margin: 20px;
-            padding: 20px;
-            border-radius: 10px;
-        }
-    </style>
+.hero h1 {
+    font-size: 40px;
+}
+
+.hero span {
+    color: #00f7ff;
+}
+
+.btn {
+    background: #00f7ff;
+    padding: 10px 20px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* SECTIONS */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* PROJECT CARDS */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: #161b22;
+    margin: 15px;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #161b22;
+}
+</style>
 </head>
 
 <body>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-
-    <div class="hero">
-        <h1>Hi, I'm Hoor-ul-Ain 👋</h1>
-        <h2>Aspiring Software & Web Developer</h2>
-        <p>I build simple and useful web applications</p>
-
-        <button class="btn">View Projects</button>
+<!-- NAVBAR -->
+<nav>
+    <h2>Hoor.dev</h2>
+    <div>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
     </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Hi, I'm <span>Hoor-ul-Ain</span> 👋</h1>
+    <p>Aspiring Software & Web Developer</p>
+    <button class="btn">Explore My Work</button>
+</div>
+
+<!-- ABOUT -->
+<div class="section" id="about">
+    <h2>About Me</h2>
+    <p>I am a Computer Science student passionate about building web applications and solving problems.</p>
+</div>
+
+<!-- PROJECTS -->
+<div class="section" id="projects">
+    <h2>My Projects</h2>
 
     <div class="projects">
-        <h2>My Projects</h2>
 
         <div class="card">
             <h3>Management System</h3>
-            <p>Web app for managing students</p>
+            <p>Web app to manage student data</p>
         </div>
 
         <div class="card">
             <h3>Home Automation</h3>
-            <p>Arduino-based smart system</p>
+            <p>Arduino smart control system</p>
         </div>
 
         <div class="card">
@@ -88,7 +142,25 @@
             <p>Stack-based editor in C++</p>
         </div>
 
+        <div class="card">
+            <h3>Temperature Converter</h3>
+            <p>Basic conversion program</p>
+        </div>
+
     </div>
+</div>
+
+<!-- CONTACT -->
+<div class="section" id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: hoorjanjua05@gmail.com</p>
+    <p>Location: Chakwal, Pakistan</p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Hoor-ul-Ain | Portfolio</p>
+</footer>
 
 </body>
 </html>
