@@ -1,29 +1,94 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Portfolio</title>
+    <title>Hoor-ul-Ain Portfolio</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background-color: #0d1117;
+            color: white;
+            text-align: center;
+        }
+
+        nav {
+            background: #161b22;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00f7ff;
+        }
+
+        .hero {
+            padding: 60px;
+        }
+
+        .btn {
+            background: #00f7ff;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .projects {
+            padding: 40px;
+        }
+
+        .card {
+            background: #161b22;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1>Welcome to My Portfolio</h1>
-    <h2>I am Hoor-ul-Ain</h2>
-    <p>Aspiring Software & Web Developer</p>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
-    <hr>
+    <div class="hero">
+        <h1>Hi, I'm Hoor-ul-Ain 👋</h1>
+        <h2>Aspiring Software & Web Developer</h2>
+        <p>I build simple and useful web applications</p>
 
-    <h3>Navigation</h3>
-    <a href="index.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="contact.html">Contact</a>
+        <button class="btn">View Projects</button>
+    </div>
 
-    <hr>
+    <div class="projects">
+        <h2>My Projects</h2>
 
-    <h3>My Projects</h3>
-    <ul>
-        <li>Management System Web App</li>
-        <li>Home Automation (Arduino)</li>
-        <li>Stack-Based Text Editor</li>
-    </ul>
+        <div class="card">
+            <h3>Management System</h3>
+            <p>Web app for managing students</p>
+        </div>
+
+        <div class="card">
+            <h3>Home Automation</h3>
+            <p>Arduino-based smart system</p>
+        </div>
+
+        <div class="card">
+            <h3>Text Editor</h3>
+            <p>Stack-based editor in C++</p>
+        </div>
+
+    </div>
 
 </body>
 </html>
